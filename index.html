@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechX Arcade - Play Free Browser Games</title>
+  <meta name="description" content="Play free browser games instantly. No download, no signup. Snake, Memory Match, Tic Tac Toe and more.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="nav">
+    <a class="logo" href="#top">TechX<span>Arcade</span></a>
+    <nav class="links">
+      <a href="#games">Games</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <p class="tag">FREE &bull; NO DOWNLOAD &bull; NO SIGNUP</p>
+      <h1>Play. Beat your <span>best score</span>.</h1>
+      <p class="sub">Quick browser games that run right here. Pick one and start playing in a second.</p>
+      <a class="btn" href="#games">Start Playing</a>
+    </section>
+
+    <section id="games" class="games">
+      <div class="games-head">
+        <h2>All Games</h2>
+        <input id="search" type="search" placeholder="Search games..." aria-label="Search games">
+      </div>
+      <div id="grid" class="grid"></div>
+      <p id="empty" class="empty hidden">No games found.</p>
+    </section>
+
+    <section id="about" class="about">
+      <h2>About</h2>
+      <p>TechX Arcade is a small collection of games built with plain HTML, CSS and JavaScript. Your best scores are saved in your own browser, so come back and beat them.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> TechX Arcade. Built with &#9889; HTML, CSS &amp; JS.</p>
+  </footer>
+
+  <!-- Game player -->
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="game-title">
+    <div class="modal-box">
+      <div class="modal-head">
+        <h3 id="game-title"></h3>
+        <div class="head-actions">
+          <button id="restart" class="small-btn">Restart</button>
+          <button id="close" class="small-btn close" aria-label="Close">&#10005;</button>
+        </div>
+      </div>
+      <div class="scorebar">Score: <b id="score">0</b> &nbsp;|&nbsp; Best: <b id="best">-</b></div>
+      <div id="stage" class="stage"></div>
+      <p id="hint" class="hint"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
